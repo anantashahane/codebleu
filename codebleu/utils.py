@@ -131,7 +131,7 @@ def get_tree_sitter_language(lang: str) -> Language:
     assert lang in AVAILABLE_LANGS, f"Language {lang} not available. Available languages: {AVAILABLE_LANGS}"
 
     try:
-        return get_language(lang)
+        return get_language(lang) #EZ Fix.
     except ImportError:
         raise ImportError(
             f"Tree-sitter language for {lang} not available. Please install the language parser using `pip install tree-sitter-{lang}`."
